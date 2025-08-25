@@ -2,7 +2,7 @@ from tkinter import *
 from PIL import ImageTk, Image
 import requests
 
-import datetime
+import time
 from io import BytesIO
 import keys
 import webbrowser
@@ -20,7 +20,7 @@ def pageConstructor(news,frame):
     for article in news["articles"]:
         if i in [0,4,8,12,16,20]:
             vframe = Frame(frame,height=float((window.winfo_screenheight()-40)/2),width=float((window.winfo_screenwidth())),bg="#FF6969")
-        
+        time.sleep(1)
         t=str(article['title'])
         d=str(article['description'])
         img =str(article['urlToImage'])
